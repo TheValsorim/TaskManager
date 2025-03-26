@@ -8,7 +8,7 @@ client = TestClient(app)
 
 def test_create_task():
     # Create a task via the API
-    response = client.post("/tasks/", json={"title": "Test Task", "description": "This is a test"})
+    response = client.post("/tasks/", json={"title": "Test Task", "completed": false})
 
     # Assert the response status code is 200 OK
     assert response.status_code == 200
